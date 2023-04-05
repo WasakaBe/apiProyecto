@@ -19,5 +19,13 @@ router.get('/presentacion',(req,res)=>{
     .catch((error)=>res.json({message:error}));
 });
 
+  //eliminar 
+  router.delete('/presentacion/:id',(req,res)=>{
+    const {id} = req.params;
+    presentacion.deleteOne({_id:id})
+    .then((data)=>res.json(data))
+    .catch((error)=>res.json({message:error}));
+});
+
 //exportar
 module.exports = router ;
