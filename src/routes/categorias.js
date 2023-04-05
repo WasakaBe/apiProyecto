@@ -22,11 +22,11 @@ router.get('/categorias',(req,res)=>{
 
 // delete a categorias
 router.delete("/categorias/:id", (req, res) => {
-    const { id } = req.params;
-    categorias.deleteOne({ _id: id })
-      .then((data) => res.json(data))
-      .catch((error) => res.json({ message: error }));
-  });
+  const { id } = req.params;
+  categorias.deleteOne({ _id: id })
+    .then((data) => res.json(data))
+    .catch((error) => res.json({ message: error }));
+});
 
 //exportar
 module.exports = router ;
