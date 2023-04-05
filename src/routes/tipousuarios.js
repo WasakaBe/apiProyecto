@@ -38,6 +38,7 @@ router.put('/tipousuarios/:id',(req,res)=>{
     .catch((error)=>res.json({message:error}));
 });
 
+
 //eliminar 
 router.delete('/tipousuarios/:id',(req,res)=>{
     const {id} = req.params;
